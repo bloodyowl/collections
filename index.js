@@ -12,5 +12,6 @@ module.exports = {
   , getPairs : require("./lib/getPairs")
   , getSize : require("./lib/getSize")
   , indexOf : require("./lib/indexOf")
+  , contains : require("./lib/contains")
   , lastIndexOf : require("./lib/lastIndexOf")
 }
