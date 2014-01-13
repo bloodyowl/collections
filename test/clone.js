@@ -24,7 +24,8 @@ tape("clone", function(test){
   test.equal(clonedArray[0], 1, "clone(array), reference broken")
   
   test.notEqual(object, clonedObject, "clone(object), reference not equal")
-  test.deepEqual(object, clonedObject, "clone(object), deep equal")
+  test.equal(clonedObject.foo, "bar", "clone(object), equal")
+  test.equal(clonedObject.bar, void 0, "ignores not owned properties")
   test.equal(clonedObject.constructor, "foo", "passes through `constructor` property")
   
   object.foo = "baz"
