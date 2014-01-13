@@ -144,3 +144,23 @@ Returns first `value`'s index in `array` or `-1` if not found.
 lastIndexOf([1,2,3,2], 2) // 3
 lastIndexOf([1,2,3,2], 4) // -1
 ```
+
+
+### `contains(array, value)` -> `boolean`
+
+Returns whether or not `array` contains `value`
+
+```javascript
+contains([1,2,3,2], 2) // true
+contains([1,2,3,2], 4) // false
+```
+
+
+### `clone(value[, deep=false])` -> `clonedObject`
+
+Clones `value` (optionaly `deep`).
+
+```javascript
+clone([1,2,3,2]) // [1,2,3,2]
+clone({foo:"bar", bar:[1,2]}, true) // {foo:"bar", bar:[1,2]}
+```
