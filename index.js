@@ -13,5 +13,6 @@ module.exports = {
   , getSize : require("./lib/getSize")
   , indexOf : require("./lib/indexOf")
   , contains : require("./lib/contains")
+  , clone : require("./lib/clone")
   , lastIndexOf : require("./lib/lastIndexOf")
 }
