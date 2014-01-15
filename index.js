@@ -17,4 +17,5 @@ module.exports = {
   , lastIndexOf : require("./lib/lastIndexOf")
   , range : require("./lib/range")
   , iterator : require("./lib/iterator")
+  , zip : require("./lib/zip")
 }

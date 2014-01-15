@@ -193,3 +193,14 @@ fn() // 3
 fn() // 4
 fn() // null
 ```
+
+### `zip(array1, array2, …) -> array`
+
+Returns a array of arrays containing the values for their index in `array1`, `array2` etc. 
+
+```javascript
+zip(["foo", "bar"], [1, 2], [true, false])
+// [["foo", 1, true], ["bar", 2, false]]
+zip(["foo", 1, true], ["bar", 2, false])
+// [["foo", "bar"], [1, 2], [true, false]]
+```
