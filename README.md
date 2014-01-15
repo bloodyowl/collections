@@ -164,3 +164,15 @@ Clones `value` (optionaly `deep`).
 clone([1,2,3,2]) // [1,2,3,2]
 clone({foo:"bar", bar:[1,2]}, true) // {foo:"bar", bar:[1,2]}
 ```
+
+### `range([start=0,] end[, step=1]) -> array`
+
+Creates an array filled with values from `start` to `end`, separated with `step`. 
+
+```
+range(0) // []
+range(5) // [0,1,2,3,4]
+range(5, 9) // [5,6,7,8]
+range(9, 5, -1) // [9,8,7,6]
+range(0, 20, 5) // [0,5,10,15]
+```
