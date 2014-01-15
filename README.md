@@ -169,7 +169,7 @@ clone({foo:"bar", bar:[1,2]}, true) // {foo:"bar", bar:[1,2]}
 
 Creates an array filled with values from `start` to `end`, separated with `step`. 
 
-```
+```javascript
 range(0) // []
 range(5) // [0,1,2,3,4]
 range(5, 9) // [5,6,7,8]
