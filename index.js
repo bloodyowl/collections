@@ -15,4 +15,5 @@ module.exports = {
   , contains : require("./lib/contains")
   , clone : require("./lib/clone")
   , lastIndexOf : require("./lib/lastIndexOf")
+  , range : require("./lib/range")
 }
