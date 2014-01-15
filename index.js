@@ -16,4 +16,5 @@ module.exports = {
   , clone : require("./lib/clone")
   , lastIndexOf : require("./lib/lastIndexOf")
   , range : require("./lib/range")
+  , iterator : require("./lib/iterator")
 }

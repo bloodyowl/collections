@@ -2,7 +2,7 @@
   "name" : "bloody-collections",
   "repository" : "https://github.com/bloodyowl/collections",
   "issues" : "https://github.com/bloodyowl/collections/issues",
-  "version" : "0.4.1",
+  "version" : "0.5.1",
   "scripts" : {
     "test" : "tape test/*.js"
   },

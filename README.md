@@ -176,3 +176,20 @@ range(5, 9) // [5,6,7,8]
 range(9, 5, -1) // [9,8,7,6]
 range(0, 20, 5) // [0,5,10,15]
 ```
+
+
+### `iterator(array) -> fn`
+
+Returns a function that returns the next element in the array every time it is called. 
+Works with sparse arrays. 
+
+```javascript
+var array = [1,2,3]
+  , fn = iterator(array)
+fn() // 1
+fn() // 2
+array.push(4)
+fn() // 3
+fn() // 4
+fn() // null
+```
