@@ -12,10 +12,10 @@ $ npm install bloody-collections
 
 ## require
 
-```
+```javascript
 var collections = require("bloody-collections")
 // or
-var each = require("bloody-collections/each")
+var each = require("bloody-collections/lib/each")
 ```
 
 ## api
@@ -187,7 +187,7 @@ Works with sparse arrays.
 
 ```javascript
 var array = [1,2,3]
-  , fn = iterator(array)
+var fn = iterator(array)
 fn() // 1
 fn() // 2
 array.push(4)
