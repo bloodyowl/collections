@@ -1,5 +1,7 @@
 # collections
 
+[![Build Status](https://travis-ci.org/bloodyowl/collections.svg)](https://travis-ci.org/bloodyowl/collections)
+
 [![browser support](https://ci.testling.com/bloodyowl/collections.png)](https://ci.testling.com/bloodyowl/collections)
 
 ## install
