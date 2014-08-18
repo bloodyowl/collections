@@ -1,5 +1,5 @@
 var tape = require("tape")
-  , getSize = require("../lib/getSize")
+var getSize = require("../lib/getSize")
 
 tape("getSize", function(test){
 
@@ -16,6 +16,6 @@ tape("getSize", function(test){
 
   test.equal(getSize(object), 3, "Objects")
   test.equal(getSize([1,2,3]) , 3, "Arrays")
-  
+
   test.end()
 })

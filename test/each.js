@@ -1,8 +1,8 @@
 var tape = require("tape")
-  , each = require("../lib/each")
+var each = require("../lib/each")
 
 tape("each", function(test){
-  
+
   var object, array, aggregator, lastIndex
   function Obj(){
     this.foo = "bar"
@@ -20,7 +20,7 @@ tape("each", function(test){
 
   test.equal(each(void 0, function(){}), void 0, "Ignores falsy values")
   test.equal(each(array, function(){}), void 0, "Returns undefined")
-  
+
   each([1], function(){
     test.equal(this, Obj, "thisValue is passed with Array")
   }, Obj)
@@ -34,7 +34,7 @@ tape("each", function(test){
   })
 
   test.equal(aggregator.join(), "1,0,1,1,,2,1,3", "Iteration on Array is correct")
-  
+
   aggregator.length = 0
 
   each(object, function(item, index){

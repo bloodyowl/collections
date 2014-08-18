@@ -1,9 +1,10 @@
 var tape = require("tape")
-  , getPairs = require("../lib/getPairs")
+var getPairs = require("../lib/getPairs")
 
 tape("getPairs", function(test){
 
-  var object, array
+  var object
+  var array
 
   function Obj(){
     this.foo = "bar"

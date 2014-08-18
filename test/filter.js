@@ -1,10 +1,13 @@
 var tape = require("tape")
-  , filter = require("../lib/filter")
+var filter = require("../lib/filter")
 
 tape("filter", function (test) {
-  
-  var object, array, aggregator, lastIndex
-  
+
+  var object
+  var array
+  var aggregator
+  var lastIndex
+
   function Obj() {
     this.foo = 1
     this.bar = 2

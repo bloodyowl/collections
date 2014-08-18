@@ -1,5 +1,5 @@
 var tape = require("tape")
-  , contains = require("../lib/contains")
+var contains = require("../lib/contains")
 
 tape("contains", function(test){
 

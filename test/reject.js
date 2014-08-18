@@ -1,8 +1,11 @@
 var tape = require("tape")
-  , reject = require("../lib/reject")
+var reject = require("../lib/reject")
 
 tape("reject", function (test) {
-  var object, array, aggregator, lastIndex
+  var object
+  var array
+  var aggregator
+  var lastIndex
 
   function Obj() {
     this.foo = 1
@@ -43,6 +46,6 @@ tape("reject", function (test) {
       "constructor" : 3
     }, "reject on Object"
   )
-  
+
   test.end()
 })

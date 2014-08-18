@@ -1,5 +1,5 @@
 var tape = require("tape")
-  , indexOf = require("../lib/indexOf")
+var indexOf = require("../lib/indexOf")
 
 tape("indexOf", function(test){
 

@@ -2,13 +2,13 @@
 
 [![browser support](https://ci.testling.com/bloodyowl/collections.png)](https://ci.testling.com/bloodyowl/collections)
 
-## Install 
+## install
 
 ```
 $ npm install bloody-collections
 ```
 
-## Require 
+## require
 
 ```
 var collections = require("bloody-collections")
@@ -16,11 +16,11 @@ var collections = require("bloody-collections")
 var each = require("bloody-collections/each")
 ```
 
-## API
+## api
 
-### `each(collection, fn[, thisValue])`
+### each(collection, fn[, thisValue])
 
-Executes `fn` with `[item, index, collection]` as arguments (and an optional `thisValue`) for each item in `collection`. 
+Executes `fn` with `[item, index, collection]` as arguments (and an optional `thisValue`) for each item in `collection`.
 
 ```javascript
 each([1,2,3], function(item){
@@ -28,7 +28,7 @@ each([1,2,3], function(item){
 })
 ```
 
-### `extend(source, object)` -> `source`
+### extend(source, object) > source
 
 Pushes every `object` values to `source`
 
@@ -36,38 +36,38 @@ Pushes every `object` values to `source`
 var values = extend({}, defaultValues)
 ```
 
-### `filter(collection, fn[, thisValue])` -> `new collection`
+### filter(collection, fn[, thisValue]) > new collection
 
-Executes `fn` with `[item, index, collection]` as arguments (and an optional `thisValue`) for each item in `collection`, and returns an collection filled with item with which `fn` returned a truthy value. 
+Executes `fn` with `[item, index, collection]` as arguments (and an optional `thisValue`) for each item in `collection`, and returns an collection filled with item with which `fn` returned a truthy value.
 
 ```javascript
-filter([1,2,3], function(item){ 
-  return !(item % 2) 
+filter([1,2,3], function(item){
+  return !(item % 2)
 }) // [2]
 ```
 
-### `reject(collection, fn[, thisValue])` -> `new collection`
+### reject(collection, fn[, thisValue]) > new collection
 
-Executes `fn` with `[item, index, collection]` as arguments (and an optional `thisValue`) for each item in `collection`, and returns an collection filled with item with which `fn` returned a falsy value. 
+Executes `fn` with `[item, index, collection]` as arguments (and an optional `thisValue`) for each item in `collection`, and returns an collection filled with item with which `fn` returned a falsy value.
 
 ```javascript
-reject([1,2,3], function(item){ 
-  return !(item % 2) 
+reject([1,2,3], function(item){
+  return !(item % 2)
 }) // [1,3]
 ```
 
 
-### `map(collection, fn[, thisValue])` -> `new collection`
+### map(collection, fn[, thisValue]) > new collection
 
 Executes `fn` with `[item, index, collection]` as arguments (and an optional `thisValue`) for each item in `collection`, and returns an collection filled with the returned values of `fn`.
 
 ```javascript
-map([1,2,3], function(item){ 
+map([1,2,3], function(item){
   return item * 2
 }) // [2,4,6]
 ```
 
-### `pluck(collection, property)` -> `new collection`
+### pluck(collection, property) > new collection
 
 Return a collection filled with `item[property]` or `null` for each `item` in `collection`
 
@@ -75,7 +75,7 @@ Return a collection filled with `item[property]` or `null` for each `item` in `c
 pluck([{1:1},{1:2},void 0,{1:3}], 1) // [1,2,null,3]
 ```
 
-### `reduce(collection, fn[, defaultValue[, thisValue]])` -> `any`
+### reduce(collection, fn[, defaultValue[, thisValue]]) > any
 
 Executes `fn` with `[lastReturnedValue, item, index, collection]` as arguments (and an optional `thisValue`) for each item in `collection`. Returns `lastReturnedValue`
 
@@ -85,9 +85,9 @@ reduce([1,3,4], function(previous, actual){
 }, "") // "134"
 ```
 
-### `reduceRight(collection, fn[, defaultValue[, thisValue]])` -> `any`
+### reduceRight(collection, fn[, defaultValue[, thisValue]]) > any
 
-Executes `fn` with `[lastReturnedValue, item, index, collection]` as arguments (and an optional `thisValue`) for each item in `collection`. Returns `lastReturnedValue`; like `reduce` but loops from the end to the start. 
+Executes `fn` with `[lastReturnedValue, item, index, collection]` as arguments (and an optional `thisValue`) for each item in `collection`. Returns `lastReturnedValue`; like `reduce` but loops from the end to the start.
 
 ```javascript
 reduceRight([1,3,4], function(previous, actual){
@@ -95,39 +95,39 @@ reduceRight([1,3,4], function(previous, actual){
 }, "") // "431"
 ```
 
-### `getKeys(collection)` -> `array`
+### getKeys(collection) > array
 
-Returns an array filled with `collection`'s keys. 
+Returns an array filled with `collection`'s keys.
 
 ```javascript
 getKeys({1:1,4:3}) // [1,4]
 ```
 
-### `getValues(collection)` -> `array`
+### getValues(collection) > array
 
-Returns an array filled with `collection`'s values. 
+Returns an array filled with `collection`'s values.
 
 ```javascript
 getValues({1:1,4:3}) // [1,3]
 ```
 
-### `getPairs(collection)` -> `array`
+### getPairs(collection) > array
 
-Returns an array filled with `collection`'s keys/values pairs. 
+Returns an array filled with `collection`'s keys/values pairs.
 
 ```javascript
 getPairs({1:1,4:3}) // [[1,1],[4,3]]
 ```
 
-### `getSize(collection)` -> `number`
+### getSize(collection) > number
 
-Returns `collection`'s size (number of values). 
+Returns `collection`'s size (number of values).
 
 ```javascript
 getSize({1:1,4:3}) // 2
 ```
 
-### `indexOf(array, value)` -> `number`
+### indexOf(array, value) > number
 
 Returns first `value`'s index in `array` or `-1` if not found.
 
@@ -136,7 +136,7 @@ indexOf([1,2,3,2], 2) // 1
 indexOf([1,2,3,2], 4) // -1
 ```
 
-### `lastIndexOf(array, value)` -> `number`
+### lastIndexOf(array, value) > number
 
 Returns first `value`'s index in `array` or `-1` if not found.
 
@@ -146,7 +146,7 @@ lastIndexOf([1,2,3,2], 4) // -1
 ```
 
 
-### `contains(array, value)` -> `boolean`
+### contains(array, value) > boolean
 
 Returns whether or not `array` contains `value`
 
@@ -156,7 +156,7 @@ contains([1,2,3,2], 4) // false
 ```
 
 
-### `clone(value[, deep=false])` -> `clonedObject`
+### clone(value[, deep=false]) > clonedObject
 
 Clones `value` (optionaly `deep`).
 
@@ -165,9 +165,9 @@ clone([1,2,3,2]) // [1,2,3,2]
 clone({foo:"bar", bar:[1,2]}, true) // {foo:"bar", bar:[1,2]}
 ```
 
-### `range([start=0,] end[, step=1]) -> array`
+### range([start=0,] end[, step=1]) > array
 
-Creates an array filled with values from `start` to `end`, separated with `step`. 
+Creates an array filled with values from `start` to `end`, separated with `step`.
 
 ```javascript
 range(0) // []
@@ -178,10 +178,10 @@ range(0, 20, 5) // [0,5,10,15]
 ```
 
 
-### `iterator(array) -> fn`
+### iterator(array) > fn
 
-Returns a function that returns the next element in the array every time it is called. 
-Works with sparse arrays. 
+Returns a function that returns the next element in the array every time it is called.
+Works with sparse arrays.
 
 ```javascript
 var array = [1,2,3]
@@ -194,9 +194,9 @@ fn() // 4
 fn() // null
 ```
 
-### `zip(array1, array2, …) -> array`
+### zip(array1, array2, …) > array
 
-Returns a array of arrays containing the values for their index in `array1`, `array2` etc. 
+Returns a array of arrays containing the values for their index in `array1`, `array2` etc.
 
 ```javascript
 zip(["foo", "bar"], [1, 2], [true, false])

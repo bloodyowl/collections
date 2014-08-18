@@ -1,10 +1,13 @@
 var tape = require("tape")
-  , map = require("../lib/map")
+var map = require("../lib/map")
 
 tape("map", function(test){
-  
-  var object, array, aggregator, lastIndex
-  
+
+  var object
+  var array
+  var aggregator
+  var lastIndex
+
   function Obj(){
     this.foo = 1
     this.bar = 2
@@ -32,6 +35,6 @@ tape("map", function(test){
   }, Obj)
 
   test.deepEqual(map(object, function(a){return a * a}), {"foo":1, "bar":4, constructor:9}, "with Object")
-  
+
   test.end()
 })

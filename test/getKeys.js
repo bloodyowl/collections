@@ -1,21 +1,22 @@
 var tape = require("tape")
-  , getKeys = require("../lib/getKeys")
+var getKeys = require("../lib/getKeys")
 
 tape("getKeys", function(test){
 
-  var object, array
+  var object
+  var array
 
   function Obj(){
     this.foo = "bar"
     this.bar = "baz"
     this.constructor = function(){}
   }
-  
+
   Obj.prototype.baz = "foo"
 
   object = new Obj()
   array = [1,1]
-    
+
   array[3] = 1
 
   test.deepEqual(getKeys(object), ["foo", "bar", "constructor"], "with object")

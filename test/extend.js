@@ -1,5 +1,5 @@
 var tape = require("tape")
-  , extend = require("../lib/extend")
+var extend = require("../lib/extend")
 
 tape("extend", function(test){
 

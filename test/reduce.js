@@ -1,22 +1,25 @@
 var tape = require("tape")
-  , reduce = require("../lib/reduce")
+var reduce = require("../lib/reduce")
 
 tape("reduce", function(test){
-  var object, array, aggregator, lastIndex
-  
+  var object
+  var array
+  var aggregator
+  var lastIndex
+
   function Obj() {
     this.foo = 1
     this.bar = 2
     this.constructor = 3
   }
-  
+
   Obj.prototype.baz = 4
-  
+
   object = new Obj
   array = [1, 2]
   aggregator = []
   lastIndex
-  
+
   array[3] = 3
 
   test.equal(
@@ -68,6 +71,6 @@ tape("reduce", function(test){
       return a + b
     }, void 0), "undefined", "Authorizes undefined as initialValue"
   )
-  
+
   test.end()
 })
